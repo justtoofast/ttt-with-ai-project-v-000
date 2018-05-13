@@ -71,6 +71,5 @@ class Game
     elsif draw?
       puts "Cat's Game!"
     end
-    board.reset!
   end
 end
