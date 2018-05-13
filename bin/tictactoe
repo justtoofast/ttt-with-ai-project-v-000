@@ -5,10 +5,11 @@ require_relative '../config/environment'
 puts "Welcome to Tic-Tac-Toe."
 puts 'Enter "0" for computer game; Enter "1" for a 1-player game; Enter "2" for a 2-player game'
 input = gets.chomp
-input = input.to_i
 if input.downcase == "wargames"
   input = 4
 end
+input = input.to_i
+
 
 case input
 when 0
@@ -24,9 +25,9 @@ when 2
 when 4
   wargame = Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new)
   count = 0
-  100.times do 
+  100.times do
     wargame.play
-    if wargame.won? 
+    if wargame.won?
       count += 1
     end
     count
