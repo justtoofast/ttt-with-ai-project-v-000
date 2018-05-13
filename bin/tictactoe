@@ -23,14 +23,14 @@ when 2
   two_player = Game.new(Players::Human.new("X"), Players::Human.new("O"), Board.new)
   two_player.play
 when 4
-  wargame = Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new)
   count = 0
   100.times do
+    wargame = Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new)
     wargame.play
     if wargame.won?
       count += 1
     end
-    @board.reset!
+
   end
   puts "The game was won #{count} times!"
 else
