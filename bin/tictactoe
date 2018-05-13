@@ -30,8 +30,8 @@ when 4
     if wargame.won?
       count += 1
     end
-    puts "The game was won #{count} times!"
   end
+  puts "The game was won #{count} times!"
 else
   puts "Please enter 0-2"
 end
