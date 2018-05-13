@@ -6,6 +6,9 @@ puts "Welcome to Tic-Tac-Toe."
 puts 'Enter "0" for computer game; Enter "1" for a 1-player game; Enter "2" for a 2-player game'
 input = gets.chomp
 input = input.to_i
+if input.downcase == "wargames"
+  input = 4
+end
 
 case input
 when 0
@@ -18,6 +21,7 @@ when 2
   puts "Player X, please go first."
   two_player = Game.new(Players::Human.new("X"), Players::Human.new("O"), Board.new)
   two_player.play
+when 4
 else
   puts "Please enter 0-2"
 end
